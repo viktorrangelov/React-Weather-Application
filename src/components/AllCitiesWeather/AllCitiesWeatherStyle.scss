@@ -1,0 +1,25 @@
+.cards-section{
+
+  h2 {
+    text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+  @media screen and (max-width: 1240px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  @media screen and (max-width: 940px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media screen and (max-width: 620px) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,53 @@
+.search {
+  flex: 0 0 400px;
+  position: relative;
+
+  &__wrapper {
+    position: relative;
+  }
+  &__input {
+    padding: 0.7rem 1.5rem;
+    width: 100%;
+    max-width: 400px;
+    outline: none;
+    border: 1px solid #e0e0e0;
+    border-radius: 2rem;
+    font-size: 1rem;
+    transition: border-color 250ms ease-in;
+
+    &:focus {
+      border-color: #ffb070;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    width: 40px;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 510px) {
+    flex: auto;
+    width: 100%;
+  }
+}
+
+.suggestions {
+  list-style: none;
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  z-index: 5;
+  max-height: 300px;
+  overflow-y: auto;
+  & > .suggestion {
+    cursor: pointer;
+    padding: 0.75rem;
+  }
+}

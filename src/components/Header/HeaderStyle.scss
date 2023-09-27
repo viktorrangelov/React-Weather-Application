@@ -1,0 +1,31 @@
+.header {
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  &__inner {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    text-decoration: none;
+    color: initial;
+    & > span {
+      font-size: 1.25rem;
+      font-weight: 500;
+
+      @media screen and (max-width: 680px) {
+        display: none;
+      }
+    }
+  }
+}
